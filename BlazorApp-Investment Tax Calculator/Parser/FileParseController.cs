@@ -6,7 +6,7 @@ namespace InvestmentTaxCalculator.Parser;
 
 public class FileParseController(IEnumerable<ITaxEventFileParser> taxEventFileParsers)
 {
-    private const long _maxFileSize = 1024 * 1024 * 100; // 100 MB
+    private const long _maxFileSize = 1024 * 1024 * 1000; // 1000 MB
 
     public async Task<TaxEventLists> ReadFile(IBrowserFile file)
     {
