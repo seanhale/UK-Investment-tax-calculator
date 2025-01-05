@@ -20,7 +20,7 @@ jobs:
      - name: Install .NET WASM Build Tools
        run: dotnet workload install wasm-tools
      - name: Add Github packages as source
-       run: dotnet nuget add source --username alexpung --password ${{ secrets.READPACKAGES }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/alexpung/index.json"
+       run: dotnet nuget add source --username seanhale --password ${{ secrets.READPACKAGES }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/seanhale/index.json"
      - name: Run tests
        run: dotnet test --collect:"XPlat Code Coverage"
      - name: Upload coverage reports to Codecov
